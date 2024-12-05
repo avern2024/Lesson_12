@@ -21,19 +21,19 @@ class TournamentTest(unittest.TestCase):
         tournament = run.Tournament(90, self.runner1, self.runner3)
         results = tournament.start()
         self.all_results[1] = {place: str(participant) for place, participant in results.items()}
-        self.assertTrue(self.all_results[max(self.all_results.keys())] == 'Ник')
+        self.assertTrue(self.all_results[1][2] == 'Ник')
 
     def test_tournament_run_2(self):
         tournament = run.Tournament(90, self.runner2, self.runner3)
         results = tournament.start()
         self.all_results[2] = {place: str(participant) for place, participant in results.items()}
-        self.assertTrue(self.all_results[max(self.all_results.keys())] == 'Ник')
+        self.assertTrue(self.all_results[2][2] == 'Ник')
 
     def test_tournament_run_3(self):
         tournament = run.Tournament(90, self.runner1, self.runner2, self.runner3)
         results = tournament.start()
         self.all_results[3] = {place: str(participant) for place, participant in results.items()}
-        self.assertTrue(self.all_results[max(self.all_results.keys())] == 'Ник')
+        self.assertTrue(self.all_results[3][3] == 'Ник')
 
 
 if __name__ == '__main__':
