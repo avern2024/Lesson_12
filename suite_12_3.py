@@ -1,6 +1,5 @@
 import unittest
-from tests_12_3 import RunnerTest
-from tests_12_3 import TournamentTest
+from tests_12_3 import RunnerTest, TournamentTest
 
 
 class AllTests(unittest.TestSuite):
